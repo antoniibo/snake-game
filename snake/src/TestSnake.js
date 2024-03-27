@@ -132,18 +132,7 @@ const TestSnake = () => {
         <div>
             {isGameRunning ? (
                 <div style={gridStyle} className="snake-container">
-                    {snake?.map((segment, index) => (
-                        <div
-                            key={index}
-                            className="snake-segment"
-                            style={{
-                                gridColumn: segment.x + 1,
-                                gridRow: segment.y + 1,
-                                backgroundColor: 'green',
-                                border: '1px solid #fff',
-                            }}
-                        ></div>
-                    ))}
+                    <Snake segments={snake} />
                     <Apple x={apple.x} y={apple.y} />
                 </div>
             ) : (

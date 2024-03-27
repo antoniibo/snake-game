@@ -2,8 +2,8 @@ import React from 'react';
 
 const Snake = ({ segments }) => {
     return (
-        <div className="snake-container">
-            {segments?.map((segment, index) => (
+        <>
+            {segments.map((segment, index) => (
                 <div
                     key={index}
                     className="snake-segment"
@@ -15,7 +15,7 @@ const Snake = ({ segments }) => {
                     }}
                 ></div>
             ))}
-        </div>
+        </>
     );
 };
 
