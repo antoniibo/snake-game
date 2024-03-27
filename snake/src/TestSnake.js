@@ -28,12 +28,21 @@ const TestSnake = () => {
    
   
     const checkAppleCollision = (newHead) => {
+      let newSnake = [...snake]; // Create a copy of the snake array
+    
       if (newHead.x === apple.x && newHead.y === apple.y) {
-          setApple(generateRandomPosition());
-          snake.push(snake[snake.length - 1]); // Add the last segment directly
+        setApple(generateRandomPosition());
+        newSnake.push(newSnake[newSnake.length - 1]); // Add a new segment to the end of the snake
       }
-      setSnake([newHead, ...snake.slice(1)]); // Update snake with new head
-  };
+    
+      // Update each segment's position to follow the previous one
+      for (let i = newSnake.length - 1; i > 0; i--) {
+        newSnake[i] = { ...newSnake[i - 1] };
+      }
+      newSnake[0] = newHead; // Update the head's position
+    
+      setSnake(newSnake); // Update the state with the new snake array
+    };
   
     useEffect(() => {
       const generateRandomPosition = () => {
