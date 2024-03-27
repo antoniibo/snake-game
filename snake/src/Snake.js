@@ -10,7 +10,7 @@ const Snake = ({ segments }) => {
                     style={{
                         gridColumn: segment.x + 1,
                         gridRow: segment.y + 1,
-                        backgroundColor: 'green',
+                        backgroundColor: index === 0 ? 'green' : 'lightgreen',
                         border: '1px solid #fff',
                     }}
                 ></div>

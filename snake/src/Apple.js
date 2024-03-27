@@ -9,6 +9,7 @@ const Apple = ({ x, y }) => {
                 gridRow: y + 1,
                 backgroundColor: 'red',
                 border: '1px solid #fff',
+                borderRadius: '50%',
             }}
         ></div>
     );
