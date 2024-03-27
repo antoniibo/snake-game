@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import Apple from './Apple';
+import Snake from './Snake';
 
 const TestSnake = () => {
     const gridSize = 20;
@@ -142,15 +144,7 @@ const TestSnake = () => {
                             }}
                         ></div>
                     ))}
-                    <div
-                        className="apple"
-                        style={{
-                            gridColumn: apple.x + 1,
-                            gridRow: apple.y + 1,
-                            backgroundColor: 'red',
-                            border: '1px solid #fff',
-                        }}
-                    ></div>
+                    <Apple x={apple.x} y={apple.y} />
                 </div>
             ) : (
                 <button onClick={startGame}>Start</button>
