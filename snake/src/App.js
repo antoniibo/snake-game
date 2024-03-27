@@ -1,5 +1,4 @@
 import './App.css';
-// import SnakeGame from './SnakeGame.js';
 import TestSnake from './TestSnake.js';
 
 function App() {
