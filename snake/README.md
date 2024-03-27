@@ -4,3 +4,5 @@ before starting, please, run this line in terminal:
 3) enjoy game!
 
 Programme was written in React framework to show my level in JS
+
+Currently, snake navigation working only in computers, using arrows in keypad
