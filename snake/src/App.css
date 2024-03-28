@@ -1,6 +1,6 @@
 h1{
   text-align: center;
-  font-size: 80%;
+  font-size: 120%;
 }
 main {
   display: flex;
@@ -18,6 +18,10 @@ main {
 
 .snake-segment {
   border: 1px solid #fff;
+}
+.Counters{
+  text-align: center;
+  font-size: 120%;
 }
 
 /* 

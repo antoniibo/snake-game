@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Apple from './Apple';
 import Snake from './Snake';
 
-const TestSnake = () => {
+const TestSnake = ({appleCount, incrementAppleCount,resetAppleCount }) => {
     const gridSize = 20;
   
     const generateRandomPosition = () => {
@@ -18,7 +18,8 @@ const TestSnake = () => {
         setSnake([{ x: 9, y: 9 }]);
         setDirection('down');
         setApple(generateRandomPosition());
-    }, []);
+        resetAppleCount();
+    }, [resetAppleCount]);
 
     const [isGameRunning, setIsGameRunning] = useState(false);
     const [snake, setSnake] = useState([{ x: 9, y: 9 }]);
@@ -52,6 +53,7 @@ const TestSnake = () => {
         if (newHead.x === apple.x && newHead.y === apple.y) {
             setApple(generateRandomPosition());
             newSnake.push(newSnake[newSnake.length - 1]);
+            incrementAppleCount()
         }
     
         for (let i = newSnake.length - 1; i > 0; i--) {
@@ -60,7 +62,7 @@ const TestSnake = () => {
         newSnake[0] = newHead; 
     
         setSnake(newSnake); 
-    }, [snake, apple]);
+    }, [snake, apple, incrementAppleCount]);
 
     useEffect(() => {
         let gameInterval;
