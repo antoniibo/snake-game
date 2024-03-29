@@ -1,19 +1,26 @@
 import React from 'react';
+import './App.css';
 
 const MobileControls = ({ handleMove }) => {
   return (
-    <div>
-      <div onClick={() => handleMove('up')} style={{ fontSize: '2em', cursor: 'pointer' }}>
-        ▲
+    <div className="mobile-controls-container">
+      <div className="mobile-control-row">
+        <div onClick={() => handleMove('up')} className="mobile-control">
+          ▲
+        </div>
       </div>
-      <div onClick={() => handleMove('left')} style={{ fontSize: '2em', cursor: 'pointer' }}>
-        ◄
+      <div className="mobile-control-row">
+        <div onClick={() => handleMove('left')} className="mobile-control">
+          ◄
+        </div>
+        <div onClick={() => handleMove('right')} className="mobile-control">
+          ►
+        </div>
       </div>
-      <div onClick={() => handleMove('right')} style={{ fontSize: '2em', cursor: 'pointer' }}>
-        ►
-      </div>
-      <div onClick={() => handleMove('down')} style={{ fontSize: '2em', cursor: 'pointer' }}>
-        ▼
+      <div className="mobile-control-row">
+        <div onClick={() => handleMove('down')} className="mobile-control">
+          ▼
+        </div>
       </div>
     </div>
   );
