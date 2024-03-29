@@ -9,16 +9,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to the snake game</h1>
+        <h1>The Snake Game</h1>
       </header>
+      <div className="Counters">
+        <p>Best result: {bestResult}</p>
+        <p> Apples eaten: {appleCount}</p>
+      </div> 
       <main>
         <TestSnake appleCount={appleCount} incrementAppleCount={incrementAppleCount} resetAppleCount={resetAppleCount}/>
-        
       </main>
-      <div className="Counters">
-        <p> Apples eaten: {appleCount}</p>
-        <p>Best result: {bestResult}</p>
-      </div> 
     </div>
   );
 }

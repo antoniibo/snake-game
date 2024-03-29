@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 const useAppleCount = () => {
-  const [appleCount, setAppleCount] = useState(0); // State variable to track apple count
-  const [bestResult, setBestResult] = useState(0); // State variable to track best result
+  const [appleCount, setAppleCount] = useState(0); 
+  const [bestResult, setBestResult] = useState(0); 
 
   const incrementAppleCount = () => {
     const newCount = appleCount + 1;
